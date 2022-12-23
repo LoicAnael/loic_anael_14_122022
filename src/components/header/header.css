@@ -1,0 +1,40 @@
+.header-container {
+  display: flex;
+  border-bottom: 4px solid #6f8516;
+  height: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 56px;
+  color: #6f8516;
+  font-weight: 800;
+  font-family: sans-serif;
+}
+
+.header-logo {
+  padding-left: 15px;
+  width: 128px;
+  height: 128px;
+}
+
+nav a {
+  margin-left: 50px;
+  text-decoration: none;
+  color: #6f8516;
+  font-size: 22px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+
+.active {
+  text-decoration: none;
+  border-bottom: solid 3px #6f8516;
+  border-radius: 15%;
+}
