@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import reportWebVitals from './reportWebVitals'
 import Header from './components/header/header'
+import Home from './pages/home/home'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -9,6 +10,9 @@ root.render(
   <React.StrictMode>
     <Router>
       <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </Router>
   </React.StrictMode>
 )
