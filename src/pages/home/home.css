@@ -102,3 +102,8 @@
 .from-button:active {
   opacity: 0.5;
 }
+.form-error {
+  color: rgb(203, 10, 10);
+  font-weight: bold;
+  font-size: 14px;
+}
