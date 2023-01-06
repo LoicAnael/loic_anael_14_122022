@@ -18,7 +18,7 @@ import {
   useGlobalFilter,
   useAsyncDebounce,
 } from 'react-table'
-import employeesMocked from '../../data/dataEmployeeMock'
+import { useSelector } from 'react-redux'
 
 function GlobalFilter({ globalFilter, setGlobalFilter }) {
   const [value, setValue] = useState(globalFilter)
@@ -48,7 +48,7 @@ function GlobalFilter({ globalFilter, setGlobalFilter }) {
 
 const EmployeeList = () => {
   const columns = useMemo(() => COLUMNS, [])
-  const data = employeesMocked
+  const data = useSelector((state) => state.employee)
 
   const tableInstance = useTable(
     {

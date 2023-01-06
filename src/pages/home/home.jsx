@@ -2,9 +2,12 @@ import './home.css'
 import dataStates from '../../data/dataStates'
 import dataDepartments from '../../data/dataDepartments'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
+import { createEmployee } from '../../redux/employeeSlice'
+import { useDispatch } from 'react-redux'
 import * as Yup from 'yup'
 
 const Home = () => {
+  const dispatch = useDispatch()
   const initialValues = {
     firstName: '',
     lastName: '',
@@ -53,6 +56,7 @@ const Home = () => {
           validationSchema={validationSchema}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             console.log(values)
+            dispatch(createEmployee(values))
             setSubmitting(false)
             resetForm()
           }}
