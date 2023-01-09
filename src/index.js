@@ -5,6 +5,7 @@ import Header from './components/header/header'
 import Home from './pages/home/home'
 import Footer from './components/footer/footer'
 import EmployeeList from './pages/employeeList/employeeList'
+import Error from './pages/error/error'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { store } from './redux/store'
 import { Provider } from 'react-redux'
@@ -18,6 +19,7 @@ root.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/employees-list" element={<EmployeeList />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </Router>

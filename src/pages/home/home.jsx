@@ -1,3 +1,4 @@
+import React from 'react'
 import './home.css'
 import dataStates from '../../data/dataStates'
 import dataDepartments from '../../data/dataDepartments'
@@ -5,9 +6,12 @@ import { Formik, Field, Form, ErrorMessage } from 'formik'
 import { createEmployee } from '../../redux/employeeSlice'
 import { useDispatch } from 'react-redux'
 import * as Yup from 'yup'
+import { Modal } from '@loic-anael/simple-component-modal'
 
 const Home = () => {
   const dispatch = useDispatch()
+  const [isShow, setIsShow] = React.useState(false)
+
   const initialValues = {
     firstName: '',
     lastName: '',
@@ -56,6 +60,7 @@ const Home = () => {
           validationSchema={validationSchema}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             console.log(values)
+            setIsShow(true)
             dispatch(createEmployee(values))
             setSubmitting(false)
             resetForm()
@@ -74,7 +79,7 @@ const Home = () => {
 
             <div className="form-div">
               <label htmlFor="lastName">Last Name</label>
-              <Field id="lastName" name="lastName" type="text" />
+              <Field id="lastName" name="lastName" required type="text" />
               <ErrorMessage
                 name="lastName"
                 component="span"
@@ -84,7 +89,7 @@ const Home = () => {
 
             <div className="form-div">
               <label htmlFor="dateOfBirth">Date of Birth</label>
-              <Field id="dateOfBirth" name="dateOfBirth" type="date" />
+              <Field id="dateOfBirth" name="dateOfBirth" required type="date" />
               <ErrorMessage
                 name="dateOfBirth"
                 component="span"
@@ -94,7 +99,7 @@ const Home = () => {
 
             <div className="form-div">
               <label htmlFor="startDate">Start Date</label>
-              <Field id="startDate" name="startDate" type="date" />
+              <Field id="startDate" name="startDate" required type="date" />
               <ErrorMessage
                 name="startDate"
                 component="span"
@@ -107,7 +112,7 @@ const Home = () => {
 
               <div className="form-div">
                 <label htmlFor="street">Street</label>
-                <Field id="street" name="street" type="text" />
+                <Field id="street" name="street" required type="text" />
                 <ErrorMessage
                   name="street"
                   component="span"
@@ -117,7 +122,7 @@ const Home = () => {
 
               <div className="form-div">
                 <label htmlFor="city">City</label>
-                <Field id="city" name="city" type="text" />
+                <Field id="city" name="city" required type="text" />
                 <ErrorMessage
                   name="city"
                   component="span"
@@ -131,6 +136,7 @@ const Home = () => {
                   id="state"
                   name="state"
                   as="select"
+                  required
                   className="from__select"
                 >
                   {dataStates.map((option, index) => (
@@ -148,7 +154,7 @@ const Home = () => {
 
               <div className="form-div">
                 <label htmlFor="zipCode">Zip Code</label>
-                <Field id="zipCode" name="zipCode" type="number" />
+                <Field id="zipCode" name="zipCode" required type="number" />
                 <ErrorMessage
                   name="zipCode"
                   component="span"
@@ -163,6 +169,7 @@ const Home = () => {
                 id="department"
                 name="department"
                 as="select"
+                required
                 className="from-select"
               >
                 {dataDepartments.map((option, index) => (
@@ -183,6 +190,7 @@ const Home = () => {
             </button>
           </Form>
         </Formik>
+        {isShow && <Modal text="Employee add" isShow={isShow} />}
       </div>
     </main>
   )
