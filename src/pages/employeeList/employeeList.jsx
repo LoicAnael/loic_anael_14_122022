@@ -1,9 +1,8 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo } from 'react'
 import './employeeList.css'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faMagnifyingGlass,
   faArrowUp,
   faArrowDown,
   faArrowRight,
@@ -16,35 +15,9 @@ import {
   usePagination,
   useFilters,
   useGlobalFilter,
-  useAsyncDebounce,
 } from 'react-table'
 import { useSelector } from 'react-redux'
-
-function GlobalFilter({ globalFilter, setGlobalFilter }) {
-  const [value, setValue] = useState(globalFilter)
-  const onChange = useAsyncDebounce((value) => {
-    setGlobalFilter(value || undefined)
-  }, 200)
-
-  return (
-    <div>
-      <span>Search:{''}</span>
-      <input
-        value={value || ''}
-        onChange={(e) => {
-          setValue(e.target.value)
-          onChange(e.target.value)
-        }}
-        placeholder="Search..."
-        className="header-search__input"
-      />
-      <FontAwesomeIcon
-        icon={faMagnifyingGlass}
-        className="header-search__icone"
-      />
-    </div>
-  )
-}
+import GlobalFilter from '../../components/globalFilter/globalFilter'
 
 const EmployeeList = () => {
   const columns = useMemo(() => COLUMNS, [])
