@@ -94,7 +94,7 @@ table th {
   padding: 12px;
 }
 
-table tr:nth-child(odd) {
+table tr:nth-child(even) {
   background-color: #94ad1819;
 }
 
@@ -129,6 +129,7 @@ table th {
   color: #6f8516;
   display: flex;
   width: 160px;
+  gap: 5px;
   justify-content: space-between;
 }
 

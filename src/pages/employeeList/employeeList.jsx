@@ -13,7 +13,6 @@ import {
   useTable,
   useSortBy,
   usePagination,
-  useFilters,
   useGlobalFilter,
 } from 'react-table'
 import { useSelector } from 'react-redux'
@@ -29,7 +28,6 @@ const EmployeeList = () => {
       data: data,
     },
     useGlobalFilter,
-    useFilters,
     useSortBy,
     usePagination
   )
@@ -38,6 +36,7 @@ const EmployeeList = () => {
     getTableProps,
     getTableBodyProps,
     headerGroups,
+    page,
     rows,
     prepareRow,
     setPageSize,
@@ -53,9 +52,6 @@ const EmployeeList = () => {
   return (
     <div className="table">
       <h1 className="table-title">Current Employees</h1>
-      <NavLink to="/" className="table-link">
-        Return Home
-      </NavLink>
       <div className="table-header">
         <div className="table-header__entries">
           <span>Show</span>
@@ -74,6 +70,7 @@ const EmployeeList = () => {
           </select>
           <span>entries</span>
         </div>
+
         <div className="table-header__search">
           <GlobalFilter
             globalFilter={state.globalFilter}
@@ -112,7 +109,7 @@ const EmployeeList = () => {
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {rows.map((row) => {
+          {page.map((row) => {
             prepareRow(row)
             return (
               <tr {...row.getRowProps()}>
@@ -126,10 +123,11 @@ const EmployeeList = () => {
       </table>
       <nav className="table-nav">
         <span className="table-nav__text">
-          Showing<span>{Number(pageIndex + 1)}</span>to
-          <span>{rows.length}</span>
+          Showing<span>{Number(page[0].index + 1)}</span>to
+          <span>{Number(page[page.length - 1].index + 1)}</span>
           of
           <span>{rows.length}</span>
+          entries
         </span>
 
         <ul className="table-nav__list">
@@ -166,6 +164,9 @@ const EmployeeList = () => {
           </li>
         </ul>
       </nav>
+      <NavLink to="/" className="table-link">
+        Return Home
+      </NavLink>
     </div>
   )
 }

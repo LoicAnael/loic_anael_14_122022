@@ -1567,10 +1567,10 @@
   "resolved" "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   "version" "2.0.4"
 
-"@loic-anael/simple-component-modal@^0.3.0":
-  "integrity" "sha512-pyeYkK/nfJe7eLy7r+4aAkSZjYIdnYVUxK8CaCLhDxvjcSghVuSFLA/vV7JvXvkoWYZznpULOI0kJ2pSHhUsWQ=="
-  "resolved" "https://registry.npmjs.org/@loic-anael/simple-component-modal/-/simple-component-modal-0.3.0.tgz"
-  "version" "0.3.0"
+"@loic-anael/simple-component-modal@^0.4.0":
+  "integrity" "sha512-CiCdnTOA0CSclMfh4HWoAVRoEnC0rQi9II9evGjo0Cb5ExPh0h8n4SzgmhalhKbiieDRYZxLOqWzrGgJav4Ojw=="
+  "resolved" "https://registry.npmjs.org/@loic-anael/simple-component-modal/-/simple-component-modal-0.4.0.tgz"
+  "version" "0.4.0"
   dependencies:
     "@testing-library/jest-dom" "^5.16.5"
     "@testing-library/react" "^13.4.0"

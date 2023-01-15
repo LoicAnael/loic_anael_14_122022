@@ -11,6 +11,9 @@ import { Modal } from '@loic-anael/simple-component-modal'
 const Home = () => {
   const dispatch = useDispatch()
   const [isShow, setIsShow] = React.useState(false)
+  const closeModal = () => {
+    setIsShow(!isShow)
+  }
 
   const initialValues = {
     firstName: '',
@@ -50,7 +53,6 @@ const Home = () => {
       .required('This field is required'),
     department: Yup.string().required('This field is required'),
   })
-
   return (
     <main className="home">
       <h2 className="home-title">Create employee</h2>
@@ -190,7 +192,9 @@ const Home = () => {
             </button>
           </Form>
         </Formik>
-        {isShow && <Modal text="Employee add" isShow={isShow} />}
+        {isShow && (
+          <Modal text="Employee add" closeModal={() => closeModal()} />
+        )}
       </div>
     </main>
   )
