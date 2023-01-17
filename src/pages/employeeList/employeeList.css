@@ -127,10 +127,9 @@ table th {
   font-size: 20px;
   font-weight: 600;
   color: #6f8516;
-  display: flex;
-  width: 160px;
+  display: block;
+  width: 60%;
   gap: 5px;
-  justify-content: space-between;
 }
 
 .table-nav__list {

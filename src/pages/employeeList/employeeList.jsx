@@ -48,6 +48,7 @@ const EmployeeList = () => {
     setGlobalFilter,
     state: { pageIndex, pageSize },
   } = tableInstance
+  const isFilter = undefined !== state.globalFilter
 
   return (
     <div className="table">
@@ -122,13 +123,26 @@ const EmployeeList = () => {
         </tbody>
       </table>
       <nav className="table-nav">
-        <span className="table-nav__text">
-          Showing<span>{Number(page[0].index + 1)}</span>to
-          <span>{Number(page[page.length - 1].index + 1)}</span>
-          of
-          <span>{rows.length}</span>
-          entries
-        </span>
+        {!isFilter ? (
+          rows.length > 0 ? (
+            <span className="table-nav__text">
+              <span>Showing {pageIndex * pageSize + 1} to </span>
+              <span>{pageIndex * pageSize + page.length}</span>
+              <span> of {rows.length} entries</span>
+            </span>
+          ) : (
+            'No matching records found'
+          )
+        ) : rows.length > 0 ? (
+          <span className="table-nav__text">
+            <span>Showing 1 to</span>
+            <span>{page.length}</span>
+            <span>of {rows.length} entries </span>
+            <span>(filtered from {data.length} total entries)</span>
+          </span>
+        ) : (
+          'No matching records found'
+        )}
 
         <ul className="table-nav__list">
           <li>
