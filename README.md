@@ -1,71 +1,46 @@
-# Getting Started with Create React App
+# Project 14 Front End Developer OpenClassrooms
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Title
 
-## Available Scripts
+### Pass a jQuery library to React
 
-In the project directory, you can run:
+## Context
 
-### `npm start`
+I work for the technology department of a large financial company, WealthHealth.
+This company uses an internal web application, called HRnet, which manages employee records. The app is old and uses jQuery on the front end, which leads to massive bugs and increased internal complaints. The development team has been struggling for some time now to upgrade the app.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Assignment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Convert the entire HRNet project to React.
+- Convert one of the four current jQuery plugins to React. Replace the 3 remaining jQuery plugins with React components that you will code yourself, or that you can import from existing libraries if you are short of time.
+- Perform Lighthouse benchmarks comparing old and new app
+- This is the repository of the application on JQuery [WealthHeath] (https://github.com/OpenClassrooms-Student-Center/P12_Front-end.git)
 
-### `npm test`
+## Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- JS
+- CSS
+- React
+- Redux
 
-### `npm run build`
+## Author
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Loic Anael](https://github.com/LoicAnael)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [NodeJS](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/)
+- [React](https://reactjs.org/docs/getting-started.html)
 
-### `npm run eject`
+## Installation for the new version in react
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Fork the repository (master branch)(https://github.com/LoicAnael/loic_anael_14_122022.git)
+- Clone it on your computer.
+- Open the folder.
+- The `npm install` or `yarn install` command will allow you to install the dependencies.
+- The `yarn start` or `npm start` command will allow you to run the project.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Preview
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# loic_anael_14_122022
+- Click on this link to display the visual result after run API https://loicanael.github.io/loic_anael_14_122022
