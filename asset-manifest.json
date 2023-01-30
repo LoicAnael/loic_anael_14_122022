@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/loic_anael_14_122022/static/css/main.29950d4d.css",
+    "main.js": "/loic_anael_14_122022/static/js/main.adee539b.js",
+    "static/js/787.f09da554.chunk.js": "/loic_anael_14_122022/static/js/787.f09da554.chunk.js",
+    "index.html": "/loic_anael_14_122022/index.html",
+    "main.29950d4d.css.map": "/loic_anael_14_122022/static/css/main.29950d4d.css.map",
+    "main.adee539b.js.map": "/loic_anael_14_122022/static/js/main.adee539b.js.map",
+    "787.f09da554.chunk.js.map": "/loic_anael_14_122022/static/js/787.f09da554.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29950d4d.css",
+    "static/js/main.adee539b.js"
+  ]
+}
